@@ -14,10 +14,6 @@ output "mount_target_interface_ids" {
   value = "${join(",", aws_efs_mount_target.efs.*.network_interface_id)}"
 }
 
-output "mount_target_dns_name" {
-  value = "${aws_efs_mount_target.efs.dns_name}"
-}
-
 output "ec2_security_group_id" {
   value = "${aws_security_group.ec2.id}"
 }
